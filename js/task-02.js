@@ -27,16 +27,23 @@ console.log(ListIngredients);// <ul id="ingredients">
                                 // <li class="item">Herbs</li>
                                 // <li class="item">Condiments</li>
                             //</ul >
+// for (let i = 0; i < ingredients.length; i += 1) {
+//   const ingredientsItem = document.createElement('li');
+//   ingredientsItem.textContent = ingredients[i];
+//   ingredientsItem.classList.add("item");
+//   console.log(ingredientsItem); // <li class="item">Potatoes</li>
+//                                 // <li class="item">Mushrooms</li>
+//                                 // <li class="item">Garlic</li>
+//                                 // <li class="item">Tomatos</li>
+//                                 // <li class="item">Herbs</li>
+//                                 // <li class="item">Condiments</li>
+//   // ListIngredients.append(ingredientsItem); // appended вивів значення попорядку в списку ul#ingredients. 
+// }
+// console.log(ingredientsArray.te)
 
-for (let i = 0; i < ingredients.length; i += 1) {
-  const ingredientsItem = document.createElement('li');
-  ingredientsItem.textContent = ingredients[i];
-  ingredientsItem.classList.add("item");
-  console.log(ingredientsItem); // <li class="item">Potatoes</li>
-                                // <li class="item">Mushrooms</li>
-                                // <li class="item">Garlic</li>
-                                // <li class="item">Tomatos</li>
-                                // <li class="item">Herbs</li>
-                                // <li class="item">Condiments</li>
-  ListIngredients.append(ingredientsItem); // appended вивів значення попорядку в списку ul#ingredients. 
-}
+const markupItem = ingredients
+  .map(elem => `<li class="ingredients-item">${elem}</li>`)
+  .join("");
+// console.log(markupItem);
+  
+ListIngredients.innerHTML = markupItem;

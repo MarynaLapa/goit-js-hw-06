@@ -16,9 +16,12 @@ body {
 input {
   padding: 8px;
   font: inherit;
+  
 }
 
 button {
   padding: 8px 12px;
   cursor: pointer;
+  
 }
+
