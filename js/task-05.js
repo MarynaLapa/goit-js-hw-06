@@ -2,12 +2,9 @@
 
 
 const inputEl = document.querySelector('#name-input');
-console.log(inputEl);
-
-inputEl.addEventListener('keydown', event => {
-    console.log(event)
-    const a = event
-    if (a !== "") {
-    console.log('ff')
-}
+// console.log(inputEl)
+const outputEl = document.querySelector('#name-output');
+// console.log(outputEl.textContent)
+inputEl.addEventListener('input', event => {
+    outputEl.textContent = event.currentTarget.value  
 })
