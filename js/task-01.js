@@ -29,7 +29,7 @@ console.log("Number of categories:", totalItem)
   |============================
 */
 // const categoriesItemTitle = document.querySelectorAll('.item h2')
-// console.log(categoriesItemTitle); //NodeList(3) [h2, h2, h2]
+// console.log(categoriesItemTitle); //NodeList(3)[h2, h2, h2]
 
 const firstElementInList = categoriesList.firstElementChild;
 // console.log(firstElementInList); // <li class="item">
