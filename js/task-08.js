@@ -21,15 +21,23 @@ function handlerSumbit(event) {
 // Якщо у формі є незаповнені поля, виводь alert з попередженням про те, що всі поля повинні бути заповнені.
         alert('All fields must be filled.')
     } else {
-        const data = {
-        email: email.value,
-        password: password.value
-    }
-    console.log(data);
+    //     const data = {
+    //     email: email.value,
+    //     password: password.value
+    // }
+   
 
+        const formData = new FormData(event.currentTarget);
+        const data = {}
+
+        formData.forEach((value, key) => {
+            data[key] = value;
+        })
+
+        console.log(data);
     // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
-    event.currentTarget.reset();
+        event.currentTarget.reset();
     }
 }
 
