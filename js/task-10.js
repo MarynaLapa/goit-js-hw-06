@@ -6,6 +6,8 @@
 // Кожен елемент після першого повинен бути ширшим і вищим від попереднього на 10px.
 // Всі елементи повинні мати випадковий колір фону у форматі HEX. Використовуй готову функцію getRandomHexColor для отримання кольору.
 
+ // Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
+
 const input = document.querySelector('input');
 // input.addEventListener('input', () => {
 //   console.log(input.value);
@@ -21,17 +23,12 @@ const buttonCreate = document.querySelector('[data-create]');
     
 buttonCreate.addEventListener('click', handlerGreateBoxes);
 
-buttonDestroy.addEventListener('click', handlerDestroyBoxes)
+buttonDestroy.addEventListener('click', destroyBoxes)
 
 
     function handlerGreateBoxes() {
       createBoxes(input.value)
     }
-
-function handlerDestroyBoxes() {
-  divBox.remove();
-    }
-
 
     function createBoxes(amount) {
 
@@ -43,24 +40,19 @@ function handlerDestroyBoxes() {
         divBox.style.width = (defaultSize + i * increaseValue) + 'px';
         divBox.style.height = (defaultSize + i * increaseValue) + 'px';
         divBox.style.backgroundColor = getRandomHexColor();
+        divBox.classList.add("js-box");
         boxesEl.append(divBox)
       } 
     }
 
 
+    function destroyBoxes() {
+      [...boxesEl.children].forEach(element => {
+        element.remove();
+      })
+};
 
-
-
-
-
-
-  
-
-
-
-
-
-    function getRandomHexColor() {
+  function getRandomHexColor() {
       return `#${Math.floor(Math.random() * 16777215)
         .toString(16)
         .padStart(6, 0)}`;
@@ -68,7 +60,7 @@ function handlerDestroyBoxes() {
 
 
 
-    // Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
+   
 
 
     // const DEFAULT_SIZE = 30;
