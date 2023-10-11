@@ -63,30 +63,4 @@ buttonDestroy.addEventListener('click', destroyBoxes)
    
 
 
-    // const DEFAULT_SIZE = 30;
-    // const DEFAULT_ADDITION = 10;
-
-
-
-
-    // function createBoxes(amount) {
-    //   const childrenCount = divBox.children.length;
-    //   let items = [];
-    //   for (let i = 0; i < amount; i++) {
-    //     let item = document.createElement('div');
-    //     item.style.height = item.style.width = DEFAULT_SIZE + DEFAULT_ADDITION * (i + childrenCount) + 'px';
-    //     item.style.backgroundColor = getRandomHexColor();
-    //     items.push(item);
-    //   }
-    //   divBox.append(...items);
-    // }
-
-    // btnCreate.addEventListener('click', () => {
-    //   createBoxes(input.value);
-    // });
-
-    // btnDestroy.addEventListener('click', () => {
-    //   [...divBox.children].forEach(element => {
-    //     element.remove();
-    //   });
-    // });
+   
