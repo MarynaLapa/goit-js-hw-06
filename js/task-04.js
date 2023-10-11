@@ -1,7 +1,9 @@
 // Лічильник складається зі спану і кнопок, які по кліку повинні збільшувати і зменшувати його значення на одиницю.
 
 // Створи змінну counterValue, в якій буде зберігатися поточне значення лічильника та ініціалізуй її значенням 0.
-
+     const counter = document.querySelector('#value');
+    // console.log(counter.textContent)
+    
     let counterValue = 0;
 
 // Додай слухачів кліків до кнопок, всередині яких збільшуй або зменшуй значення лічильника.
@@ -11,7 +13,8 @@
     console.log(buttonDecrement);
     const declineClick = () => {
         counterValue -= 1;
-        console.log(counterValue);
+        counter.textContent = counterValue;
+        // console.log(counterValue);
     }
 
 
@@ -19,10 +22,12 @@
     console.log(buttonIncrement);
     const enlargeClick = () => {
         counterValue += 1;
-        console.log(counterValue);
+        counter.textContent = counterValue;
+        // console.log(counterValue);
     }
 
     buttonIncrement.addEventListener("click", enlargeClick);
     buttonDecrement.addEventListener("click", declineClick);
 
+   
 
